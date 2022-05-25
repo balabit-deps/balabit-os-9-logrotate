@@ -1,0 +1,6 @@
+debian/skip-cronjob-when-running-with-systemd.patch
+debian/logrotate.conf-disable-dateext-on-Debian.patch
+ubuntu/logrotate.conf-use-group-adm.patch
+debian/replace-ELF-header-in-test-case.patch
+ubuntu/CVE-2022-1348-1.patch
+ubuntu/CVE-2022-1348-2.patch

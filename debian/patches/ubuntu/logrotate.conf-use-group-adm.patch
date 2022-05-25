@@ -1,0 +1,21 @@
+Description: Use group 'adm' instead of 'syslog' when rotating logs.
+Author: Lukas Märdian <slyon@ubuntu.com>
+Origin: vendor
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/logrotate/+bug/1644996
+Forwarded: not-needed
+Last-Update: 2021-05-18
+---
+
+--- logrotate-3.18.0.orig/examples/logrotate.conf
++++ logrotate-3.18.0/examples/logrotate.conf
+@@ -5,6 +5,10 @@
+ # rotate log files weekly
+ weekly
+ 
++# use the adm group by default, since this is the owning group
++# of /var/log/syslog.
++su root adm
++
+ # keep 4 weeks worth of backlogs
+ rotate 4
+ 
